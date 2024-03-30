@@ -347,10 +347,20 @@ prefix: `/`
 - `}` and `{` move by paragraph
 - `f` or `t` followed by character 
 - `gg` to top, `G` to end of file
+- `100G` or `:100` will go to line 100
 
 |||
 
 <!-- .slide: data-background-image="assets/movement.gif" data-background-size="contain"  -->
+
+---
+
+## Change
+
+- `r` will replace a character with the next typed
+- `c` plus a movement will delete then insert
+- Example: `ce` to change to the end of the word
+- `c$` to change to end of line; `C` is synonymous
 
 ---
 
@@ -374,6 +384,15 @@ prefix: `/`
 - `U` to undo all changes on a line
 - `ctrl-r` to redo the last undo
 - (undo a `U` with `u`, oddly)
+
+---
+
+## File commands
+
+- `:e filename.txt` opens a file
+- `:w` saves the file
+- `:w filename.txt` saves to filename
+- `:r filename.txt` retrieves file contents
 
 ---
 
