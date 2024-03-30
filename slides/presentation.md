@@ -42,16 +42,20 @@ Story of Admin Assistant looking up and always seeing me still coming. Monty Pyt
 
 ---
 
-## Itinerary
+1. History
+1. Hooray for Open Source
+1. Modes: insert, normal, command...
+1. Movement, change, repetition
+1. Files
+1. Searching
+1. Navigating help
+1. Extending Neovim
+1. Learning Resources
+1. Discussion
 
-- History
-- Open Source perks
-- Starting and quitting
-- Getting around (cursor movement)
-- Modes: insert, normal/command, visual, visual block
-- Navigating help
-- Repetition!
-- Links
+Notes:
+
+Itinerary of where we are going
 
 ---
 
@@ -242,6 +246,71 @@ Neovim and Vim together have around a third of the pie. I love that most of thes
 - corners defined by cursor
 - select desired block, then type action
 
+|||
+
+## Replace mode
+
+- type over existing text
+- `R` (shift-r) enters replace mode
+
+---
+
+## Movement
+
+- `h j k l`: left, down, up, right
+- cursor keys work fine, too
+- `w` and `b` move by word
+- `)` and `(` move by sentence
+- `}` and `{` move by paragraph
+- `f` or `t` followed by character 
+- `gg` to top, `G` to end of file
+- `100G` or `:100` will go to line 100
+
+|||
+
+<!-- .slide: data-background-image="assets/movement.gif" data-background-size="contain"  -->
+
+---
+
+## Change
+
+- `r` will replace a character with the next typed
+- `c` plus a movement will delete then insert
+- Example: `ce` to change to the end of the word
+- `c$` to change to end of line; `C` is synonymous
+
+---
+
+## Repetition
+
+- `.` repeats a simple change
+
+|||
+
+## Record macros
+
+- `q` followed by register (a-z work great)
+- Execute a variety of actions
+- press `q` to end the recording
+- play back with `@` then the register
+- `@@` repeats the last played recording
+
+## Undo
+
+- `u` to undo the last change
+- `U` to undo all changes on a line
+- `ctrl-r` to redo the last undo
+- (undo a `U` with `u`, oddly)
+
+---
+
+## File commands
+
+- `:e filename.txt` opens a file
+- `:w` saves the file
+- `:w filename.txt` saves to filename
+- `:r filename.txt` retrieves file contents
+
 ---
 
 ## Searching
@@ -335,64 +404,6 @@ prefix: `/`
 `:h /\d`
 
 `:h /[`
-
----
-
-## Movement
-
-- `h j k l`: left, down, up, right
-- cursor keys work fine, too
-- `w` and `b` move by word
-- `)` and `(` move by sentence
-- `}` and `{` move by paragraph
-- `f` or `t` followed by character 
-- `gg` to top, `G` to end of file
-- `100G` or `:100` will go to line 100
-
-|||
-
-<!-- .slide: data-background-image="assets/movement.gif" data-background-size="contain"  -->
-
----
-
-## Change
-
-- `r` will replace a character with the next typed
-- `c` plus a movement will delete then insert
-- Example: `ce` to change to the end of the word
-- `c$` to change to end of line; `C` is synonymous
-
----
-
-## Repetition
-
-- `.` repeats a simple change
-
-|||
-
-## Record macros
-
-- `q` followed by register (a-z work great)
-- Execute a variety of actions
-- press `q` to end the recording
-- play back with `@` then the register
-- `@@` repeats the last played recording
-
-## Undo
-
-- `u` to undo the last change
-- `U` to undo all changes on a line
-- `ctrl-r` to redo the last undo
-- (undo a `U` with `u`, oddly)
-
----
-
-## File commands
-
-- `:e filename.txt` opens a file
-- `:w` saves the file
-- `:w filename.txt` saves to filename
-- `:r filename.txt` retrieves file contents
 
 ---
 
