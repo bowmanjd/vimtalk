@@ -175,6 +175,21 @@ Neovim and Vim together have around a third of the pie. I love that most of thes
 
 ---
 
+## Open source at its best
+
+- Quality from public scrutiny
+- Hospitable community
+- No financial barriers
+- Relevant features from public contribution and thorough review
+- Openly extendable, easy to integrate
+- Longevity unencumbered by corporate captivity
+
+Notes:
+
+Open source projects can be dysfunctional, and closed source processes can be healthy. Yet Neovim is an prototypical example of an open source project 
+
+|||
+
 ## Collaborate!
 
 - <!-- .element: class="fragment" --> <i class="nf nf-oct-heart"></i> Donate 
@@ -213,11 +228,15 @@ Neovim and Vim together have around a third of the pie. I love that most of thes
 - Vim starts in normal mode; `<Esc>` returns
 - Things to try:
   - `h`, `j`, `k`, `l` or cursor keys to move
-  - `gg` move to top of file; `G` move to bottom
+  - `gg` move to top of file; `G` move to bottom or line #
   - `yy` to "yank" (copy) a line
   - `dd` to delete (cut) a line
   - `x` to cut character under the cursor
   - `p` to paste
+
+|||
+
+<!-- .slide: data-background-image="assets/normal.gif" data-background-size="contain"  -->
 
 |||
 
@@ -240,11 +259,19 @@ Neovim and Vim together have around a third of the pie. I love that most of thes
 
 |||
 
+<!-- .slide: data-background-image="assets/visual.gif" data-background-size="contain"  -->
+
+|||
+
 ## Visual block mode
 
 - `ctrl-v` enters visual block mode
 - corners defined by cursor
 - select desired block, then type action
+
+|||
+
+<!-- .slide: data-background-image="assets/visualblock.gif" data-background-size="contain"  -->
 
 |||
 

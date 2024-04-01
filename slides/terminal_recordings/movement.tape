@@ -99,7 +99,7 @@ Sleep 1
 Type "h"
 Sleep 1
 Hide
-Type ':lua explain({"<Right><Down><Left><Up> ", "<Right><Down><Left><Up>"}, "Arrow keys work fine too", 6000)'
+Type ':lua explain({"<Right><Down><Left><Up> ", "<Right><Down><Left><Up>"}, "Arrow keys work fine too", 8000)'
 Enter
 Type ':'
 Escape
@@ -122,16 +122,16 @@ Sleep 1
 Up
 Sleep 1
 Hide
-Type ':lua explain("6j", "Repeat by typing number before motion", 2000)'
+Type ':lua explain("6j", "Repeat by typing number before motion", 5000)'
 Enter
 Type ':'
 Escape
 Show
 Sleep 1
 Type '6'
-Sleep 1
+Sleep 2
 Type 'j'
-Sleep 1
+Sleep 3
 Hide
 Type ':lua explain("w", "Move to next word", 2000)'
 Enter
