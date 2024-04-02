@@ -7,7 +7,7 @@ vim.bowmanjd.com
 
 Notes:
 
-Welcome. I am Jonathan Bowman. I have been using Vim for over 20 years. I know that makes me just a beginner, but you have to start somewhere.
+Welcome. I am Jonathan Bowman. This talk is about Vim, a terminal-based text editor. I have been using Vim for over 20 years. Still learning...
 
 ---
 
@@ -15,7 +15,7 @@ Welcome. I am Jonathan Bowman. I have been using Vim for over 20 years. I know t
 
 Notes:
 
-Story of Admin Assistant looking up and always seeing me still coming. Monty Python. Lots of people love it. But not everyone. _And not everyone has to love it_.
+One of my co-workers saw me coming down the hall. She said that every time she looked up, she still saw me coming in the distance. As she told a few of us this, two of us immediately thought of that sketch from Monty Python's Holy Grail. But we didn't say anything, because we didn't want anyone to feel left out. Monty Python. Lots of people love it. But not everyone. _And not everyone has to love it_. Today, I am inviting you to consider Vim. Even if you don't end up using it, you might still enjoy pondering open source, well-designed tooling, collaboration, and maybe use your preferred text editor even better.
 
 ---
 
@@ -31,6 +31,10 @@ Story of Admin Assistant looking up and always seeing me still coming. Monty Pyt
 - Fedora: <!-- .element: class="fragment" --> `dnf install neovim`
 - Nix: <!-- .element: class="fragment" --> `nix-shell -p neovim`
 
+Notes:
+
+I encourage you to follow along if you have a laptop or phone (using iSH or Termux). While your OS may already have a version of vi and vim, for the full experience I would strongly suggest Neovim. You can install neovim in any of these ways. 
+
 ---
 
 ## Launch Neovim
@@ -39,6 +43,10 @@ Story of Admin Assistant looking up and always seeing me still coming. Monty Pyt
 - `nvim`
 - :help <!-- .element: class="fragment" -->
 - :Tutor <!-- .element: class="fragment" -->
+
+Notes:
+
+To start Neovim, in your terminal of choice (suggest Windows Terminal on Windows) type `nvim`. You can get start learning right away (and pretty much tune out the rest of this talk) by typing `:help` for a reference, or `:Tutor` for a 30 minute guided tutorial.
 
 ---
 
@@ -62,6 +70,10 @@ Itinerary of where we are going
 ## vim.bowmanjd.com
 
 ![QR code](assets/qrcode.svg) <!-- .element: class="hero" -->
+
+Notes:
+
+You can access this slide deck and related materials at vim.bowmanjd.com.
 
 ---
 

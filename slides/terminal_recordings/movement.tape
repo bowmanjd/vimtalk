@@ -133,50 +133,50 @@ Sleep 2
 Type 'j'
 Sleep 3
 Hide
-Type ':lua explain("w", "Move to next word", 2000)'
+Type ':lua explain("w", "Move to next word", 4000)'
 Enter
 Type ':'
 Escape
 Show
-Sleep 1
+Sleep 2
 Type 'w'
-Sleep 1
+Sleep 2
 Hide
-Type ':lua explain("b", "Move to previous word", 2000)'
+Type ':lua explain("b", "Move to previous word", 4000)'
 Enter
 Type ':'
 Escape
 Show
-Sleep 1
+Sleep 2
 Type 'b'
-Sleep 1
+Sleep 2
 
 Hide
-Type ':lua explain("fN", "f moves to character", 2000)'
+Type ':lua explain("fN", "f moves to character", 6000)'
 Enter
 Type ':'
 Escape
 Show
-Sleep 1
+Sleep 2
 Type 'f'
-Sleep 1
+Sleep 2
 Type 'N'
-Sleep 1
+Sleep 2
 
 Hide
-Type ':lua explain("t.", "t moves before character", 2000)'
+Type ':lua explain("t.", "t moves before character", 6000)'
 Enter
 Type ':'
 Escape
 Show
-Sleep 1
+Sleep 2
 Type 't'
-Sleep 1
+Sleep 2
 Type '.'
-Sleep 1
+Sleep 2
 
 Hide
-Type ':lua explain(";", "; repeats last f or t", 3000)'
+Type ':lua explain(";", "; repeats last f or t", 4000)'
 Enter
 Type ':'
 Escape
@@ -186,27 +186,27 @@ Type ';'
 Sleep 2
 
 Hide
-Type ':lua explain("0", "0 to line beginning", 2000)'
+Type ':lua explain("0", "0 to line beginning", 3000)'
 Enter
 Type ':'
 Escape
 Show
 Sleep 1
 Type '0'
-Sleep 1
+Sleep 2
 
 Hide
-Type ':lua explain("$", "$ to line end", 2000)'
+Type ':lua explain("$", "$ to line end", 3000)'
 Enter
 Type ':'
 Escape
 Show
 Sleep 1
 Type '$'
-Sleep 1
+Sleep 2
 
 Hide
-Type ':lua explain("}", "} to next paragraph", 2000)'
+Type ':lua explain("}", "} to next paragraph", 3000)'
 Enter
 Type ':'
 Escape
@@ -216,7 +216,7 @@ Type '}'
 Sleep 2
 
 Hide
-Type ':lua explain("{", "{ to previous paragraph", 2000)'
+Type ':lua explain("{", "{ to previous paragraph", 3000)'
 Enter
 Type ':'
 Escape
@@ -226,7 +226,7 @@ Type '{'
 Sleep 2
 
 Hide
-Type ':lua explain(")", ") to next sentence", 2000)'
+Type ':lua explain(")", ") to next sentence", 3000)'
 Enter
 Type ':'
 Escape
@@ -237,7 +237,7 @@ Type ')'
 Sleep 2
 
 Hide
-Type ':lua explain("(", "( to previous sentence", 2000)'
+Type ':lua explain("(", "( to previous sentence", 3000)'
 Enter
 Type ':'
 Escape
@@ -247,7 +247,7 @@ Type '('
 Sleep 2
 
 Hide
-Type ':lua explain("gg", "gg to top of file", 2000)'
+Type ':lua explain("gg", "gg to top of file", 3000)'
 Enter
 Type ':'
 Escape
@@ -257,7 +257,7 @@ Type 'gg'
 Sleep 2
 
 Hide
-Type ':lua explain("G", "G to end of file", 2000)'
+Type ':lua explain("G", "G to end of file", 3000)'
 Enter
 Type ':'
 Escape
