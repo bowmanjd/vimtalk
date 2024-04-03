@@ -46,7 +46,7 @@ I encourage you to follow along if you have a laptop or phone (using iSH or Term
 
 Notes:
 
-To start Neovim, in your terminal of choice (suggest Windows Terminal on Windows) type `nvim`. You can get start learning right away (and pretty much tune out the rest of this talk) by typing `:help` for a reference, or `:Tutor` for a 30 minute guided tutorial.
+To start Neovim, in your terminal of choice (if you are on Windows, I suggest Windows Terminal) type `nvim`. You can get start learning right away (and pretty much tune out the rest of this talk) by typing `:help` for a reference, or `:Tutor` for a 30 minute guided tutorial.
 
 ---
 
@@ -63,7 +63,7 @@ To start Neovim, in your terminal of choice (suggest Windows Terminal on Windows
 
 Notes:
 
-Itinerary of where we are going
+Here is an itinerary so you know where we are going today.
 
 ---
 
@@ -83,11 +83,15 @@ You can access this slide deck and related materials at vim.bowmanjd.com.
 
 Notes:
 
-An ASR-33 teletype machine first made in 1963. No screen, just paper.
+An ASR-33 teletype machine first made in 1963. No screen, just paper. It needs a line editor to edit.
 
 |||
 
-1966: [QED](https://en.wikipedia.org/wiki/Ed_(text_editor)), a line editor<!-- .element: class="r-stretch" -->
+1966: [QED](https://en.wikipedia.org/wiki/QED_(text_editor)), a line editor<!-- .element: class="r-stretch" -->
+
+Notes:
+
+One of the first line editors. Also introduced regular expressions for the first time.
 
 |||
 
@@ -95,7 +99,11 @@ An ASR-33 teletype machine first made in 1963. No screen, just paper.
 
 |||
 
-<!-- .slide: data-background-image="assets/ed.gif"  -->
+<!-- .slide: data-background-image="assets/ed.gif" data-background-size="contain"  -->
+
+Notes:
+
+Here you can see ed (the one from the GNU project) in action. Some of the features here still exist in Vim.
 
 |||
 
@@ -121,11 +129,19 @@ In 1979, ex got a visual mode: vi
 
 ...eventually [included in the POSIX spec](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/vi.html)
 
+Notes:
+
+vi is the visual mode of ex, developed a few years later.
+
 |||
 
 ## Works on a video terminal!
 
-![ADM-3A](assets/Adm3a.jpg) <!-- .element: class="hero" -->
+[![ADM-3A](assets/Adm3a.jpg) <!-- .element: class="hero" -->](https://en.wikipedia.org/wiki/ADM-3A)
+
+Notes:
+
+The first video terminal (check it out! It has a screen) vi was developed for was the ADM-3A. 12 inch screen, with a whopping 80 columns of text.
 
 |||
 
@@ -133,7 +149,7 @@ In 1979, ex got a visual mode: vi
 
 Notes:
 
-Note where the arrow keys are!
+Here is an outline of the keyboard. Note where the arrow keys are! This may explain some things later.
 
 |||
 
@@ -145,7 +161,7 @@ Note where the arrow keys are!
 
 Notes:
 
-None of these are terribly active today
+vi was so good, it got improvements. None of these are terribly active today.
 
 |||
 
@@ -155,7 +171,7 @@ None of these are terribly active today
 
 Notes:
 
-But this one is. Bram, the original author, wanted something like Stevie on his Amiga 2000, which until then didn't have a vi-like editor for it. (I always wished I had an Amiga 2000).
+But this one is still quite active. Bram, the original author, wanted something like Stevie on his Amiga 2000, which until then didn't have a vi-like editor for it. (I always wished I had an Amiga 2000).
 
 |||
 
@@ -165,7 +181,7 @@ But this one is. Bram, the original author, wanted something like Stevie on his 
 
 Notes:
 
-Bram pursued what I would call a "benevolent dictator" model of leadership in an open source software project. It was a labor of love. He was a gatekeeper, tending the product. But for some it was like the sign says "You got to have a membership card to get inside" Huh
+Bram pursued what I would call a "benevolent dictator" model of leadership in an open source software project. It was a labor of love, it was his baby. He was a gatekeeper, tending the product. But open source developers are an eager bunch and for some, his gatekeeping felt like the sign says "You got to have a membership card to get inside" Huh
 
 |||
 
@@ -173,7 +189,7 @@ Bram pursued what I would call a "benevolent dictator" model of leadership in an
 
 Notes:
 
-In 2015, Neovim was released after forking Vim. The reasons for the fork were varied, with primary emphasis on community contribution, modernizing code and structure, and a new plugin system.
+So, in 2015, Neovim was released after forking Vim. The reasons for the fork were varied, with primary emphasis on community contribution, modernizing code and structure, and a new plugin system.
 
 I switched to Neovim a few years ago because of the way it integrated with external languages like Python, Ruby, and Javascript, and because of built in support for language servers -- the Language Server Protocol (LSP)
 
@@ -183,7 +199,7 @@ I switched to Neovim a few years ago because of the way it integrated with exter
 
 Notes:
 
-Neovim and Vim together have around a third of the pie. I love that most of these are open source... says something about developer tooling; still trying to put a finger on it...
+Vim and Neovim have a notable percentage. I love that most of these are open source... What does it say that the tool developers probably use the most and care about the most are often open source?
 
 ---
 
@@ -198,7 +214,7 @@ Neovim and Vim together have around a third of the pie. I love that most of thes
 
 Notes:
 
-Open source projects can be dysfunctional, and closed source processes can be healthy. Yet Neovim is an prototypical example of an open source project 
+Open source projects can be dysfunctional, and closed source processes can be healthy. Yet Neovim is an prototypical example of an open source project done well. (read the points)
 
 |||
 
@@ -210,13 +226,25 @@ Open source projects can be dysfunctional, and closed source processes can be he
 - <!-- .element: class="fragment" --> <i class="nf nf-oct-git_pull_request"></i> Code
 - <!-- .element: class="fragment" --> <i class="nf nf-md-stack_exchange"></i> Help
 
+Notes:
+
+Do you ever stop and ponder how you might play a role in the open source tools you use? (Read points)
+
 ---
 
 # Modes <!-- .element: class="hero" -->
 
+Notes:
+
+Let's launch into a bit of a Vim how-to. A concept that seems important to grasp early on with Vim is that it has multiple _modes_.
+
 |||
 
 <!-- .slide: data-background-image="assets/bob-ross-insert.jpg" data-background-size="contain"  -->
+
+Notes:
+
+Think of an artist. A painter. Some of the time, they are in a mode with their brush on the canvas. This, in Vim, we call "insert mode".
 
 |||
 
@@ -228,9 +256,17 @@ Open source projects can be dysfunctional, and closed source processes can be he
 - `O` (open new line above) new line above current
 - `<Esc>` returns to normal mode
 
+Notes:
+
+Vim doesn't start in insert mode, but you can get there with these keys. (read keys)
+
 |||
 
 <!-- .slide: data-background-image="assets/bob-ross-normal.jpg" data-background-size="contain"  -->
+
+Notes:
+
+A painter does do a lot, though, with the brush _off_ the canvas. In Vim, this is called "normal mode"
 
 |||
 
@@ -246,9 +282,17 @@ Open source projects can be dysfunctional, and closed source processes can be he
   - `x` to cut character under the cursor
   - `p` to paste
 
+Notes:
+
+Read points
+
 |||
 
 <!-- .slide: data-background-image="assets/normal.gif" data-background-size="contain"  -->
+
+Notes:
+
+Here is a mixed up poem. Using only keys in normal mode, with no mouse, it is possible to rearrange the lines. A contrived example, but it is remarkable how much of my daily editing is just moving lines around.
 
 |||
 
@@ -260,6 +304,10 @@ Open source projects can be dysfunctional, and closed source processes can be he
 - `:w` will save the current file
 - Commands can be combined, as in `:wq`
 - This is Ex mode (line editing)
+
+Notes:
+
+Read points
 
 |||
 
@@ -273,6 +321,10 @@ Open source projects can be dysfunctional, and closed source processes can be he
 
 <!-- .slide: data-background-image="assets/visual.gif" data-background-size="contain"  -->
 
+Notes:
+
+Here we enter visual mode with `v` then select two sentences, then delete them.
+
 |||
 
 ## Visual block mode
@@ -284,6 +336,12 @@ Open source projects can be dysfunctional, and closed source processes can be he
 |||
 
 <!-- .slide: data-background-image="assets/visualblock.gif" data-background-size="contain"  -->
+
+Notes:
+
+Need to delete a rectangle of text? Happens more than you think.
+
+Can also automate a repeated insert before the block. Or after.
 
 |||
 
@@ -305,6 +363,10 @@ Open source projects can be dysfunctional, and closed source processes can be he
 - `gg` to top, `G` to end of file
 - `100G` or `:100` will go to line 100
 
+Notes:
+
+Read the points
+
 |||
 
 <!-- .slide: data-background-image="assets/movement.gif" data-background-size="contain"  -->
@@ -324,6 +386,10 @@ Open source projects can be dysfunctional, and closed source processes can be he
 
 - `.` repeats a simple change
 
+Notes:
+
+For instance, if I want to delete 3 words at a time, I use 3dw. Then I can just hit `.` to delete the next three words. And so on.
+
 |||
 
 ## Record macros
@@ -333,6 +399,10 @@ Open source projects can be dysfunctional, and closed source processes can be he
 - press `q` to end the recording
 - play back with `@` then the register
 - `@@` repeats the last played recording
+
+Notes:
+
+Recorded macros can be easily repeated, and also accept a number before.
 
 ## Undo
 
@@ -466,6 +536,10 @@ Neovim is easy to extend through:
 
 |||
 
+Notes:
+
+lazy.nvim seems to be far and away the hip new favorite. Others are also good options, or you can handle it manually with git yourself.
+
 ## LSP integration
 
 - [Language Server Protocol](https://microsoft.github.io/language-server-protocol/)
@@ -473,12 +547,20 @@ Neovim is easy to extend through:
 - Completions: [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 - [Mason](https://github.com/williamboman/mason.nvim) to manage the external tooling
 
+Notes:
+
+Neovim can easily interface with the same language servers that VSCode uses. Use nvim-lspconfig to make life easier. nvim-cmp to add autocompletions, and mason to make installing dependencies easier.
+
 |||
 
 ## Learn Lua for optimal Neovim configuration
 
 - [learnxinyminutes.com/docs/lua](https://learnxinyminutes.com/docs/lua/)
 - [`:h lua-guide`](https://neovim.io/doc/user/lua-guide.html) 
+
+Notes:
+
+The old way that still works to configure Vim is with Vimscript. Neovim supports Lua which is faster and is its own general purpose language. Learn a little lua can make confuring Neovim smoother for you.
 
 |||
 
@@ -507,7 +589,7 @@ Neovim is easy to extend through:
 
 Notes:
 
-For a good out-of-box experience, consider one of these
+For a good out-of-box experience, consider one of these. VS Code is not a Neovim distribution, I suppose. But it is a popular way of using Neovim. You get real Neovim and real VS Code in one.
 
 ---
 
