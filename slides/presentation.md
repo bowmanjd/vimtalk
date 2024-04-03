@@ -1,8 +1,10 @@
 # Try a little Vim
 
-![neovim logo](assets/neovim-logo.svg) <!-- .element: class="r-stretch" -->
+[![neovim logo](assets/neovim-logo.svg) <!-- .element: class="r-stretch" -->](https://neovim.io)
 
-vim.bowmanjd.com
+Install it to follow along: [neovim.io](https://neovim.io)
+
+slides: [vim.bowmanjd.com](https://vim.bowmanjd.com)
 ![QR code](assets/qrcode.svg) <!-- .element: class="r-stretch" style="vertical-align: middle" -->
 
 Notes:
@@ -29,7 +31,7 @@ One of my co-workers saw me coming down the hall. She said that every time she l
 - Mac:  <!-- .element: class="fragment" --> `brew install neovim`
 - Debian/Ubuntu: <!-- .element: class="fragment" --> `apt install neovim`
 - Fedora: <!-- .element: class="fragment" --> `dnf install neovim`
-- Nix: <!-- .element: class="fragment" --> `nix-shell -p neovim`
+- Nix: <!-- .element: class="fragment" --> `nix-shell -p neovim` (also [NixNeovim](https://github.com/NixNeovim/NixNeovim))
 
 Notes:
 
@@ -171,7 +173,7 @@ vi was so good, it got improvements. None of these are terribly active today.
 
 Notes:
 
-But this one is still quite active. Bram, the original author, wanted something like Stevie on his Amiga 2000, which until then didn't have a vi-like editor for it. (I always wished I had an Amiga 2000).
+But this one is still quite active. Bram Moolenar, the original author, wanted something like Stevie on his Amiga 2000, which until then didn't have a vi-like editor for it. (I always wished I had an Amiga 2000).
 
 |||
 
@@ -199,7 +201,7 @@ I switched to Neovim a few years ago because of the way it integrated with exter
 
 Notes:
 
-Vim and Neovim have a notable percentage. I love that most of these are open source... What does it say that the tool developers probably use the most and care about the most are often open source?
+From the 2023 Stack Overflow Developer Survey. Vim and Neovim have a notable percentage. I love that most of these are open source... What does it say that the tool developers probably use the most and care about the most are often open source?
 
 ---
 
@@ -214,7 +216,7 @@ Vim and Neovim have a notable percentage. I love that most of these are open sou
 
 Notes:
 
-Open source projects can be dysfunctional, and closed source processes can be healthy. Yet Neovim is an prototypical example of an open source project done well. (read the points)
+I am not suggesting that open source projects are always healthy, or that closed source are always dysfunctional. But I do think Neovim is an example of an open source project done well. (read the points)
 
 |||
 
@@ -404,6 +406,8 @@ Notes:
 
 Recorded macros can be easily repeated, and also accept a number before.
 
+---
+
 ## Undo
 
 - `u` to undo the last change
@@ -434,10 +438,10 @@ Recorded macros can be easily repeated, and also accept a number before.
 
 ## Search and replace
 
-- `s/war/peace/`
-- `s/war/peace/g`
-- `%s/war/peace/g`
-- `%s/war/peace/gc`
+- `:s/war/peace/`
+- `:s/war/peace/g`
+- `:%s/war/peace/g`
+- `:%s/war/peace/gc`
 
 Notes:
 
@@ -458,7 +462,7 @@ Abbreviated `:h`
 
 |||
 
-## Help with Normal mode commands
+## Help with Normal mode
 
 `:help x`
 
@@ -476,7 +480,7 @@ prefix: `:`
 
 |||
 
-## Help with Insert mode commands
+## Help with Insert mode
 
 prefix: `i_`
 
@@ -486,7 +490,7 @@ prefix: `i_`
 
 |||
 
-## Help with Visual mode commands
+## Help with Visual mode
 
 prefix: `v_`
 
@@ -522,7 +526,7 @@ Neovim is easy to extend through:
 
 - Plugins
 - Language Servers
-- Customization
+- Configuration
 
 |||
 
@@ -534,11 +538,11 @@ Neovim is easy to extend through:
 - [vim-plug](https://github.com/junegunn/vim-plug)
 - built-in/manually: see `:h plugin`
 
-|||
-
 Notes:
 
 lazy.nvim seems to be far and away the hip new favorite. Others are also good options, or you can handle it manually with git yourself.
+
+|||
 
 ## LSP integration
 
@@ -553,6 +557,19 @@ Neovim can easily interface with the same language servers that VSCode uses. Use
 
 |||
 
+## Config file
+
+- `:e $MYVIMRC`
+- Mac/Linux/BSD: ~/.config/nvim/init.lua
+- Windows: ~/AppData/Local/nvim/init.lua
+- `:echo stdpath("config")`
+
+Notes:
+
+You can edit your config with the $MYVIMRC variable. Here are the likely locations depending on your platform. if those don't work, echo stdpath should show you the config directory.
+
+|||
+
 ## Learn Lua for optimal Neovim configuration
 
 - [learnxinyminutes.com/docs/lua](https://learnxinyminutes.com/docs/lua/)
@@ -560,7 +577,7 @@ Neovim can easily interface with the same language servers that VSCode uses. Use
 
 Notes:
 
-The old way that still works to configure Vim is with Vimscript. Neovim supports Lua which is faster and is its own general purpose language. Learn a little lua can make confuring Neovim smoother for you.
+The old way that still works to configure Vim is with Vimscript. No shame if you are still using vimscript; it works well. Neovim supports Lua which is faster and is its own general purpose language. Learn a little lua can make configuring Neovim smoother for you.
 
 |||
 
@@ -595,6 +612,10 @@ For a good out-of-box experience, consider one of these. VS Code is not a Neovim
 
 # Learning resources <!-- .element: class="hero" -->
 
+Notes:
+
+Lots of ways to learn in addition to the built-in documentation, including books, blogs, Streams...
+
 |||
 
 <!-- .slide: data-background-image="assets/Learning-the-vi-and-Vim-Editors.jpg" data-background-size="contain"  -->
@@ -610,6 +631,8 @@ For a good out-of-box experience, consider one of these. VS Code is not a Neovim
 
 |||
 
+- [neo.vimhelp.org](https://neo.vimhelp.org/)
+- [neovim.discourse.group](https://neovim.discourse.group/)
 - ["Getting Started" from the subreddit](https://www.reddit.com/r/neovim/wiki/index/getting-started/)
 - [vi.stackexchange.com](https://vi.stackexchange.com/)
 - [Awesome Neovim](https://github.com/rockerBOO/awesome-neovim)
