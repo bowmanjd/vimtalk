@@ -13,6 +13,15 @@ Welcome. I am Jonathan Bowman. This talk is about Vim, a terminal-based text edi
 
 ---
 
+- <span class="email">jonathan@bowmanjd<i>.obfusticinator.</i>.com</span>
+- [github.com/bowmanjd](https://github.com/bowmanjd)
+- [bowmanjd.com](https://bowmanjd.com)
+- [dev.to/bowmanjd](https://dev.to/bowmanjd/)
+- [twitter.com/jdbowman](https://twitter.com/jdbowman)
+- [fosstodon.org/@bowmanjd](https://fosstodon.org/@bowmanjd)
+
+---
+
 ![Monty Python running knight](assets/montypython.webp) <!-- .element: class="r-stretch" style="vertical-align: middle" -->
 
 Notes:
